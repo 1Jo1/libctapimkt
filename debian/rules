@@ -17,3 +17,6 @@ common-binary-post-install-arch::
 	d-shlibmove --commit \
 		    --movedev "debian/tmp/*.h" usr/include \
 		    debian/tmp/usr/lib/$(pkg).so
+
+clean::
+	rm -f debian/$(pkg)1-dev.substvars
