@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+# include /usr/share/cdbs/1/rules/patchsys-quilt.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/autotools.mk
+
+pkg=libctapimkt
+version=1.0
+
+common-binary-post-install-arch::
+	# Call d-shlibmove to comply with library packaging guide
+	d-devlibdeps debian/$(pkg)1-dev.substvars \
+	             debian/tmp/usr/lib/$(pkg).so
+	# /bin/sh debian/debug/
+	cp -a *.h debian/tmp
+	# cp -a doc/html/* debian/tmp/usr/share/doc/html
+	d-shlibmove --commit \
+		    --movedev "debian/tmp/*.h" usr/include \
+		    debian/tmp/usr/lib/$(pkg).so
+
+clean::
+	rm -f debian/$(pkg)1-dev.substvars

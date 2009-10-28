@@ -1,0 +1,25 @@
+X-Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat
+X-Debianized-By: Andreas Tille <tille@debian.org>
+X-Debianized-Date: Sat, 22 Mar 2008 13:41:13 +0100
+X-Source-Downloaded-From: http://sourceforge.net/projects/ctapi-mkt
+X-Upstream-Author: Claudia Neumann <dr.claudia.neumann@gmx.de>
+
+Source: http://sourceforge.net/projects/ctapi-mkt
+
+Files: debian/*
+Copyright: © 2008, Andreas Tille <tille@debian.org>
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+
+Files: *
+Copyright: © 2007, 2008 Claudia Neumann <dr.claudia.neumann@gmx.de>
+License: GPL-2
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation version 2 of the License.
+
+On Debian systems, the complete text of the licenses can be found in:
+GPL-2 - `/usr/share/common-licenses/GPL-2'
