@@ -3,7 +3,7 @@ Priority: optional
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 DM-Upload-Allowed: yes
 Uploaders: Andreas Tille <tille@debian.org>
-Build-Depends: debhelper (>= 6), autotools-dev, d-shlibs (>= 0.38), cdbs
+Build-Depends: debhelper (>= 7), autotools-dev, automake, d-shlibs (>= 0.38), cdbs
 Standards-Version: 3.8.3
 Section: libs
 Homepage:  http://sourceforge.net/projects/ctapi-mkt
