@@ -1,3 +1,13 @@
+libctapimkt (1.0.5-1) UNRELEASED; urgency=low
+
+  * New upstream version
+    Closes: #557495
+  * debian/control:
+    - Standards-Version: 3.9.0 (no changes needed)
+    - Build-Depends: libusb-dev
+
+ -- Andreas Tille <tille@debian.org>  Thu, 08 Jul 2010 11:40:28 +0200
+
 libctapimkt (1.0.1-1) unstable; urgency=low
 
   * Initial release (Closes: #554045)
