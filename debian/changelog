@@ -5,6 +5,7 @@ libctapimkt (1.0.5-1) UNRELEASED; urgency=low
   * debian/control:
     - Standards-Version: 3.9.0 (no changes needed)
     - Build-Depends: libusb-dev
+  * debian/libctapimkt0-dev.examples: mktlin.c
 
  -- Andreas Tille <tille@debian.org>  Thu, 08 Jul 2010 11:40:28 +0200
 
