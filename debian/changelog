@@ -9,6 +9,14 @@ libctapimkt (1.0.5-1) UNRELEASED; urgency=low
 
  -- Andreas Tille <tille@debian.org>  Thu, 08 Jul 2010 11:40:28 +0200
 
+libctapimkt (1.0.1-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Move include files from libctapimkt0-dev into
+    a subdirectory. (Closes: #606265)
+
+ -- Neil Williams <codehelp@debian.org>  Tue, 07 Dec 2010 21:37:22 +0000
+
 libctapimkt (1.0.1-1) unstable; urgency=low
 
   * Initial release (Closes: #554045)
