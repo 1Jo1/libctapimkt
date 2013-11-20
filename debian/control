@@ -1,33 +1,38 @@
 Source: libctapimkt
-Priority: optional
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
-DM-Upload-Allowed: yes
 Uploaders: Andreas Tille <tille@debian.org>
-Build-Depends: debhelper (>= 7), autotools-dev, automake, d-shlibs (>= 0.38), cdbs,
- libusb-dev
-Standards-Version: 3.9.0
 Section: libs
-Homepage:  http://sourceforge.net/projects/ctapi-mkt
-Vcs-Browser: http://svn.debian.org/wsvn/debian-med/trunk/packages/libctapimkt/
-Vcs-Svn: svn://svn.debian.org/debian-med/trunk/packages/libctapimkt/trunk/
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               autotools-dev,
+               d-shlibs,
+               libusb-dev,
+Standards-Version: 3.9.4
+Vcs-Browser: http://anonscm.debian.org/viewvc/debian-med/trunk/packages/libctapimkt/trunk/
+Vcs-Svn: svn://anonscm.debian.org/debian-med/trunk/packages/libctapimkt/trunk/
+Homepage: http://sourceforge.net/projects/ctapi-mkt
 
-Package: libctapimkt0-dev
-Section: libdevel
+Package: libctapimkt1-dev
 Architecture: any
-Depends: libctapimkt0 (= ${binary:Version}), ${devlibs:Depends}, ${misc:Depends}, ctapi-dev
+Section: libdevel
+Depends: libctapimkt1 (= ${binary:Version}),
+         ${devlibs:Depends},
+         ${misc:Depends},
+         ctapi-dev
 Provides: libctapimkt-dev
 Conflicts: libctapimkt-dev
-Description: Read German Krankenversichertenkarte and eGK
+Description: Read German Krankenversichertenkarte and eGK (development)
  Library and program to read the German health insurance card (KVK) and
  the German electronic health card (eGK) from a certified card reading
  device on the serial port in Linux with kernel 2.6.x.
  .
  This package contains the development library.
 
-Package: libctapimkt0
-Section: libs
+Package: libctapimkt1
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Section: libs
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
 Description: Read German Krankenversichertenkarte and eGK
  Library and program to read the German health insurance card (KVK) and
  the German electronic health card (eGK) from a certified card reading

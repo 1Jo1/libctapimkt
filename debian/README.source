@@ -1,0 +1,10 @@
+libctapimkt for Debian
+----------------------
+
+The plain *.[ch] files were submitted via e-mail a long time ago (2008)
+by upstream because I promised to write some autotools stuff around this
+which was supposed to be published at the download site.  Unfortunately
+the later did not happened until now and there is no point in letting
+the new code bit-rot on my hard disk.
+
+ -- Andreas Tille <tille@debian.org>  Wed, 13 Nov 2013 13:20:29 +0100

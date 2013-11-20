@@ -1,13 +1,17 @@
-libctapimkt (1.0.5-1) UNRELEASED; urgency=low
+libctapimkt (1.0.5~rc1-1) unstable; urgency=low
 
-  * New upstream version
-    Closes: #557495
+  * New upstream version (see README.source)
+    Closes: #702130
+  * debian/format/source: 3.0 (quilt)
   * debian/control:
-    - Standards-Version: 3.9.0 (no changes needed)
-    - Build-Depends: libusb-dev
+     - cme fix dpkg-control
+     - canonical Vcs URLs
+     - debhelper 9
+     - Build-Depends: libusb-dev
   * debian/libctapimkt0-dev.examples: mktlin.c
+  * debian/rules: use dh
 
- -- Andreas Tille <tille@debian.org>  Thu, 08 Jul 2010 11:40:28 +0200
+ -- Andreas Tille <tille@debian.org>  Wed, 13 Nov 2013 13:20:29 +0100
 
 libctapimkt (1.0.1-1.1) unstable; urgency=low
 

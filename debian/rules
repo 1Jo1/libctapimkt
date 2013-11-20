@@ -1,28 +1,17 @@
 #!/usr/bin/make -f
 
-# include /usr/share/cdbs/1/rules/patchsys-quilt.mk
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/autotools.mk
+pkg:= $(shell dpkg-parsechangelog | awk '/^Source:/ {print $$2}')
+version:=1
 
-pkg=libctapimkt
-version=0
+%:
+	dh $@
 
-## make sure we really use the ctapi.h header file from ctapi-dev package
-#makebuilddir::
-#	if [ -e ctapi.h ] ; then mv ctapi.h ctapi.h_ ; fi
-
-common-binary-post-install-arch::
+override_dh_install:
+	dh_install
 	# Call d-shlibmove to comply with library packaging guide
-	d-devlibdeps debian/$(pkg)$(version)-dev.substvars \
-	             debian/tmp/usr/lib/$(pkg).so
-	# /bin/sh debian/debug/
-	mkdir -p debian/$(pkg)$(version)-dev/usr/include
-	cp -a ctapimkt debian/$(pkg)$(version)-dev/usr/include
+	mkdir -p debian/tmp/usr/include
+	cp -a ctapimkt debian/tmp/usr/include
 	d-shlibmove --commit \
-		    debian/tmp/usr/lib/$(pkg).so
-
-clean::
-	rm -f debian/$(pkg)$(version)-dev.substvars
-#	# revert the rename of the original header file
-#	if [ -e ctapi.h_ ] ; then mv ctapi.h_ ctapi.h ; fi
-
+		    --multiarch \
+		    --movedev "debian/tmp/usr/include/*" usr/include/ \
+		    debian/tmp/usr/lib/*/*.so
