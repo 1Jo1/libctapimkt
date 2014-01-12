@@ -4,7 +4,7 @@ pkg:= $(shell dpkg-parsechangelog | awk '/^Source:/ {print $$2}')
 version:=1
 
 %:
-	dh $@
+	dh $@ --with autoreconf
 
 override_dh_install:
 	dh_install

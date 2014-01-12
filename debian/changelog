@@ -1,3 +1,12 @@
+libctapimkt (1.0.5~rc1-2) unstable; urgency=medium
+
+  * use dh-autoreconf to fix FTBFS on ppc64el (thanks for the patch to
+    Logan Rosen <logan@ubuntu.com>)
+    Closes: #735011
+  * cme fix dpkg-control
+
+ -- Andreas Tille <tille@debian.org>  Sun, 12 Jan 2014 09:52:58 +0100
+
 libctapimkt (1.0.5~rc1-1) unstable; urgency=low
 
   * New upstream version (see README.source)
