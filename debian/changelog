@@ -1,11 +1,11 @@
-libctapimkt (1.0.5~rc1-3) UNRELEASED; urgency=medium
+libctapimkt (1.0.5~rc1-3) unstable; urgency=medium
 
   * Enable building with clang (thanks for the patch to Nicolas
     Sévelin-Radiguet <nicosr@free.fr>)
     Closes: #742534
   * cme fix dpkg-control
 
- -- Andreas Tille <tille@debian.org>  Sat, 02 Jan 2016 23:21:12 +0100
+ -- Andreas Tille <tille@debian.org>  Sat, 02 Jan 2016 23:23:59 +0100
 
 libctapimkt (1.0.5~rc1-2) unstable; urgency=medium
 
