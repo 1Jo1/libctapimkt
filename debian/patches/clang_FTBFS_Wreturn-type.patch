@@ -5,7 +5,7 @@ Last-Update: 2014-03-24
 
 --- a/mktlin.c
 +++ b/mktlin.c
-@@ -337,7 +337,7 @@
+@@ -337,7 +337,7 @@ int antwort(unsigned char *abschnitt){
        PROGRAM_ABORT;
      }
    }
