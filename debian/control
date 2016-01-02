@@ -7,7 +7,7 @@ Build-Depends: debhelper (>= 9),
                dh-autoreconf,
                d-shlibs,
                libusb-dev
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Vcs-Browser: http://anonscm.debian.org/viewvc/debian-med/trunk/packages/libctapimkt/trunk/
 Vcs-Svn: svn://anonscm.debian.org/debian-med/trunk/packages/libctapimkt/trunk/
 Homepage: http://sourceforge.net/projects/ctapi-mkt
