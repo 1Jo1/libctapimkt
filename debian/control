@@ -6,7 +6,7 @@ Priority: optional
 Build-Depends: debhelper (>= 9),
                dh-autoreconf,
                d-shlibs,
-               libusb-dev
+               libusb-1.0-0-dev
 Standards-Version: 3.9.6
 Vcs-Browser: http://anonscm.debian.org/viewvc/debian-med/trunk/packages/libctapimkt/trunk/
 Vcs-Svn: svn://anonscm.debian.org/debian-med/trunk/packages/libctapimkt/trunk/

@@ -1,1 +1,2 @@
 clang_FTBFS_Wreturn-type.patch
+libusb-1.0.patch

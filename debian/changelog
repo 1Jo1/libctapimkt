@@ -1,3 +1,10 @@
+libctapimkt (1.0.5~rc1-4) UNRELEASED; urgency=medium
+
+  * switch to libusb 1.0
+    Closes: #810429
+
+ -- Andreas Tille <tille@debian.org>  Sat, 09 Jan 2016 08:08:42 +0100
+
 libctapimkt (1.0.5~rc1-3) unstable; urgency=medium
 
   * Enable building with clang (thanks for the patch to Nicolas

@@ -1,0 +1,15 @@
+Author: Andreas Tille <tille@debian.org>
+Last-Update: Sat, 09 Jan 2016 08:08:42 +0100
+Bug-Debian: https://bugs.debian.org/810429
+Description: Switch to libusb 1.0
+
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -14,6 +14,6 @@ libctapimkt_la_SOURCES = ctapi.c ctapimk
+ bin_PROGRAMS = mktlin
+ mktlin_SOURCES = mktlin.c
+ mktlin_LDADD = $(LDADD)
+-LDADD = -lrt -lusb -ldl -lctapimkt
++LDADD = -lrt -lusb-1.0 -ldl -lctapimkt
+ 
+ MAINTAINERCLEANFILES = autom4te.cache
