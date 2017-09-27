@@ -1,0 +1,28 @@
+Version 1.0.5
+
+06.06.2010    Claudia Neumann
+    
+    - proprietäre Bibliotheken können dynamisch geladen werden.
+    - Löschen der KVK/eGK-Daten bei mobilen Lesegeräten wird durch
+      dritten Parameter ausgelöst.
+    - Fehler im WTX-Request behoben.
+    - Fehlerbehandlung bei schlechter Kommunikation verbessert.
+    - Unterstützung von /dev/ACM*
+    - Unterstützung von /dev/USB*
+    - Unterstützung von Hypercom medMobile und SCM eHealth500 mit
+      Eingabe der PIN.
+    - mehrere kleine Fehler behoben.
+
+Version 1.0.1
+
+03.04.2008    Claudia Neumann
+
+    Anpassung an die CT-API-Erfordernisse:
+    - WTX-Request wird innerhalb der Bibliothek gehandhabt.
+    - der serielle Port wird nicht mehr als String sondern 
+      als Zahl angegeben, die direkt in ctn bzw. pn �bernommen
+      werden.
+
+    automake tools (Andreas Tille)
+          
+    
