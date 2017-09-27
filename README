@@ -1,0 +1,62 @@
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2, or (at your option)
+  any later version.
+ 
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+ 
+  You should have received a copy of the GNU General Public License
+  along with this software; see the file COPYING.   If not, write to
+  the Free Software Foundation, Inc., 59 Temple Place, Suite 330,
+  Boston, MA 02111-1307 USA (or visit the web site http://www.gnu.org/).
+ 
+   Contact: Dr. Claudia Neumann
+            Herderstr. 7
+            D - 26169 Friesoythe
+
+            dr. claudia.neumann@gmx.de
+
+   Because most people interested in this software will be germans I will 
+   switch to german from here on.
+
+   Libctapimkt ist eine Bibliothek zum Auslesen der Krankenversichertenkarte (KVK)
+   und der elektronischen Gesundheitskarte (eGK) mit von der KBV zertifizierten 
+   Lesegeräten, die am seriellen Port angeschlossen werden. 
+
+   Zum Kompilieren und Installieren lesen Sie bitte die Datei INSTALL
+     
+   Das Programm mktlin wird aufgerufen:
+   mktlin <serielle Port-Nr> <Bibliothek> 
+   wobei /dev/ttyS0 = 1 entsprechend der Windows-Zählung beim COM-Port z.B. 
+   mktlin.unx 1 3
+
+   zum Löschen der Kartendaten bei mobilem Gerät:
+   mktlin <serielle Port-Nr> <Bibliothek> 1
+
+   Das Programm gibt in die Datei karte.txt die Art der Karte aus:
+   KVK -> Krankenversichertenkarte
+   eGK -> elektronische Gesundheitskarte
+   
+   Die Daten werden folgendermaßen ausgegeben:
+   ef_kvk.txt -> Daten der Krankversichtenkarte
+   ef_st.txt -> Statusinformationen der eGK
+   ef_pd.gz -> gzippter XML-File mit Patientendaten der eGK
+   ef_vd.gz -> gzippter XML-File mit Versicherungsdaten der eGK
+
+   Dokumentation finden Sie unter:
+   http://www.kbv.de/ita/register_G.html für die KVK und 
+   http://www.gematik.de/upload/gematik_Qop_eGK_Spezifikation_Teil1_V1_1_0_Kommentare_4_1652.pdf 
+   für die eGK.
+
+   getestet mit:
+     Kernel > 2.6.8
+     läuft mit allen von der KBV zertifizierten KVK-Lesegeräten, die an der seriellen Schnittstelle angeschlossen
+     werden. Alle gematik-zugelassenen eHealt-BCS-Geräte können entweder mit der libctapi-mkt oder mit proprietären
+     Treibern über mktlin ausgelesen werden. Siehe auch www.resmedicinae.org/manuals/.
+
+    Fehler, Verbesserungen und Kritik an:
+        dr.claudia.neumann@gmx.de
+

@@ -1,8 +1,0 @@
-libctapimkt for Debian
-----------------------
-
-This library is needed to read the German Krankenversichertenkarte (KVK)
-and the elektronische Gesundheitskarte (eGK).  So it is most probably
-useless for people outside Germany.
-
- -- Andreas Tille <tille@debian.org>  Sat, 22 Mar 2008 13:41:13 +0100
