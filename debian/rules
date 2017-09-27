@@ -1,10 +1,7 @@
 #!/usr/bin/make -f
 
-pkg:= $(shell dpkg-parsechangelog | awk '/^Source:/ {print $$2}')
-version:=1
-
 %:
-	dh $@ --with autoreconf
+	dh $@
 
 override_dh_install:
 	dh_install

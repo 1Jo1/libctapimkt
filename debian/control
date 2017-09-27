@@ -3,8 +3,7 @@ Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.
 Uploaders: Andreas Tille <tille@debian.org>
 Section: libs
 Priority: optional
-Build-Depends: debhelper (>= 9),
-               dh-autoreconf,
+Build-Depends: debhelper (>= 10),
                d-shlibs,
                libusb-1.0-0-dev
 Standards-Version: 4.1.0
