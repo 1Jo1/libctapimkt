@@ -1,0 +1,17 @@
+Description: Fix parallel FTBFS
+ Fix a parallel FTBFS caused by not telling make
+ that libctapimkt is not an external library.
+Author: Adrian Bunk <bunk@debian.org>
+Last-Update: Wed, 15 Nov 2017 23:41:09 +0200
+Bug-Debian: https://bugs.debian.org/881865
+
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -14,6 +14,6 @@ libctapimkt_la_SOURCES = ctapi.c ctapimk
+ bin_PROGRAMS = mktlin
+ mktlin_SOURCES = mktlin.c
+ mktlin_LDADD = $(LDADD)
+-LDADD = -lrt -lusb-1.0 -ldl -lctapimkt
++LDADD = -lrt -lusb-1.0 -ldl libctapimkt.la
+ 
+ MAINTAINERCLEANFILES = autom4te.cache
