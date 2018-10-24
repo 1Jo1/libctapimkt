@@ -1,6 +1,7 @@
 libctapimkt (1.0.5~rc1-7) UNRELEASED; urgency=medium
 
   * debhelper 11
+  * Point Vcs fields to salsa.debian.org
 
  -- Andreas Tille <tille@debian.org>  Wed, 24 Oct 2018 11:21:13 +0200
 
