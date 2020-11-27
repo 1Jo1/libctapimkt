@@ -10,6 +10,7 @@ Standards-Version: 4.5.1
 Vcs-Browser: https://salsa.debian.org/med-team/libctapimkt
 Vcs-Git: https://salsa.debian.org/med-team/libctapimkt.git
 Homepage: http://sourceforge.net/projects/ctapi-mkt
+Rules-Requires-Root: no
 
 Package: libctapimkt1-dev
 Architecture: any
