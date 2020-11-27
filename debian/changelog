@@ -3,6 +3,7 @@ libctapimkt (1.0.5~rc1-8) UNRELEASED; urgency=medium
   * Remove *.la file
   * Standards-Version: 4.5.1 (routine-update)
   * debhelper-compat 13 (routine-update)
+  * Add salsa-ci file (routine-update)
 
  -- Andreas Tille <tille@debian.org>  Fri, 27 Nov 2020 11:47:11 +0100
 
