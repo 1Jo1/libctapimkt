@@ -30,6 +30,7 @@ Description: Read German Krankenversichertenkarte and eGK (development)
 
 Package: libctapimkt1
 Architecture: any
+Section: libs
 Depends: ${shlibs:Depends},
          ${misc:Depends}
 Description: Read German Krankenversichertenkarte and eGK
