@@ -1,4 +1,4 @@
-libctapimkt (1.0.5~rc1-8) UNRELEASED; urgency=medium
+libctapimkt (1.0.5~rc1-8) unstable; urgency=medium
 
   * Remove *.la file
   * Standards-Version: 4.5.1 (routine-update)
@@ -7,7 +7,7 @@ libctapimkt (1.0.5~rc1-8) UNRELEASED; urgency=medium
   * Rules-Requires-Root: no (routine-update)
   * Remove Section on libctapimkt1 that duplicates source.
 
- -- Andreas Tille <tille@debian.org>  Fri, 27 Nov 2020 11:47:11 +0100
+ -- Andreas Tille <tille@debian.org>  Fri, 27 Nov 2020 11:57:50 +0100
 
 libctapimkt (1.0.5~rc1-7) unstable; urgency=medium
 
