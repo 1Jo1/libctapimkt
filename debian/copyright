@@ -1,6 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Contact: Claudia Neumann <dr.claudia.neumann@gmx.de>
 Source: http://sourceforge.net/projects/ctapi-mkt
+Upstream-Name: ctapimkt
 
 Files: *
 Copyright: 2007-2008 Claudia Neumann <dr.claudia.neumann@gmx.de>
