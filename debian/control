@@ -21,6 +21,7 @@ Depends: libctapimkt1 (= ${binary:Version}),
          ctapi-dev
 Conflicts: libctapimkt-dev
 Provides: libctapimkt-dev
+Multi-Arch: same
 Description: Read German Krankenversichertenkarte and eGK (development)
  Library and program to read the German health insurance card (KVK) and
  the German electronic health card (eGK) from a certified card reading
@@ -32,6 +33,7 @@ Package: libctapimkt1
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends}
+Multi-Arch: same
 Description: Read German Krankenversichertenkarte and eGK
  Library and program to read the German health insurance card (KVK) and
  the German electronic health card (eGK) from a certified card reading
