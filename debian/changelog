@@ -4,6 +4,7 @@ libctapimkt (1.0.5~rc1-9) UNRELEASED; urgency=medium
   * Set field Upstream-Name in debian/copyright.
   * Apply multi-arch hints.
     + libctapimkt1, libctapimkt1-dev: Add Multi-Arch: same.
+  * Standards-Version: 4.6.0 (routine-update)
 
  -- Andreas Tille <tille@debian.org>  Sat, 16 Jan 2021 18:37:22 +0100
 
