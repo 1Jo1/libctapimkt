@@ -1,4 +1,4 @@
-libctapimkt (1.0.5~rc1-9) UNRELEASED; urgency=medium
+libctapimkt (1.0.5~rc1-9) unstable; urgency=medium
 
   * Fix machine readable copyright
   * Set field Upstream-Name in debian/copyright.
@@ -6,7 +6,7 @@ libctapimkt (1.0.5~rc1-9) UNRELEASED; urgency=medium
     + libctapimkt1, libctapimkt1-dev: Add Multi-Arch: same.
   * Standards-Version: 4.6.0 (routine-update)
 
- -- Andreas Tille <tille@debian.org>  Sat, 16 Jan 2021 18:37:22 +0100
+ -- Andreas Tille <tille@debian.org>  Thu, 26 Aug 2021 10:33:18 +0200
 
 libctapimkt (1.0.5~rc1-8) unstable; urgency=medium
 
