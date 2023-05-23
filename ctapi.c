@@ -345,12 +345,15 @@ while (j<10){
     }
   }
   else if (frage[1]==0xC0) {
+	  	  printf("2.1\n");
     #ifdef DEBUG
     fprintf(stdout,"\nResynch request\n");
     #endif
     
     retval=readblock(port, 1);
     if (retval < 0)return retval;
+	  
+	  	  	  	  printf("2.1.1\n");
 
     apdu[3]=frage[0];
     if (apdu[3]!=fxor(apdu,3)) return ERR_INVALID;
@@ -364,11 +367,13 @@ while (j<10){
     wtx=0;
   }
   else if (frage[1]==0xC3) {
+	  	  	  printf("2.2\n");
     #ifdef DEBUG
     fprintf(stdout,"WTX-Request\n");
     #endif
     if(j==10)errx(1,"WTX-Fehler\n");
     retval=readblock(port, len);
+	  	  	  	  printf("2.2.1\n");
     if (retval < 0)return retval;
 
     lenblock=len+3;
@@ -386,9 +391,10 @@ while (j<10){
     j++;
   }
   else {
+	  	  	  	  printf("2.3\n");
     retval=readblock(port,len);
     if (retval < 0)return retval;
-
+	  	  	  printf("2.3.1\n");
     lenblock=len+3;
     for(i=0;i<lenblock;i++) {
       apdu[i+3]=frage[i];
