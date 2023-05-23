@@ -288,12 +288,14 @@ lenc=lenc+4;
 
 j=0;
 while (j<10){
+  printf("counter: %d\n", j);
   retval=sendblock(port, block, lenc);
   if (retval < 0)return retval;
-
+  printf("0\n");
   retval=readblock(port, 3);
   if (retval < 0)return retval;
 
+  printf("1\n");
   memset( apdu, 0x00, sizeof(apdu));
   for (i=0; i<3 ; i++){
     apdu[i]=frage[i];
@@ -306,19 +308,31 @@ while (j<10){
     #endif
     
     retval=readblock(port, 1);
-    if (retval < 0)return retval;
 
+    if (retval < 0)return retval; 
+
+    printf("2\n");
     apdu[3]=frage[0];
     if (apdu[3]!=fxor(apdu,3)) return ERR_INVALID;
+
+    printf("3\n");
     fehler++;
     if (fehler==2){
     retval = sendblock(port, ask_resync, sizeof(ask_resync));
     if (retval < 0)return retval;
+    
+    printf("4\n");
 
     retval=readblock(port,4);
     if (retval < 0)return retval;
+
+    printf("5\n");
     if (frage[3]!=fxor(frage,3)) return ERR_INVALID;
+				
+    printf("6\n");
     if (frage[1] != 0xe0) return ERR_INVALID;
+
+    printf("7\n");
     block[1] = 0x00;
     pcb=1;
     wtx=0;
