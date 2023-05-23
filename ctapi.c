@@ -402,7 +402,7 @@ while (j<10){
       response[lenresp+i]=frage[i];
     }
 	  	  	  	  	  printf("2.3.3\n");
-    if (apdu[lenblock-1]!=fxor(apdu,lenblock-1)) return ERR_INVALID;
+    /*if (apdu[lenblock-1]!=fxor(apdu,lenblock-1)) return ERR_INVALID;*/
    	  	  	  	  printf("2.3.4\n");
     lenblock=len+3;
     lenresp=lenresp+len-1;
