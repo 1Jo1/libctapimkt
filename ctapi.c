@@ -396,21 +396,24 @@ while (j<10){
     if (retval < 0)return retval;
 	  	  	  printf("2.3.1\n");
     lenblock=len+3;
+	  	  	  	  printf("2.3.2\n");
     for(i=0;i<lenblock;i++) {
       apdu[i+3]=frage[i];
       response[lenresp+i]=frage[i];
     }
+	  	  	  	  	  printf("2.3.3\n");
     if (apdu[lenblock-1]!=fxor(apdu,lenblock-1)) return ERR_INVALID;
-   
+   	  	  	  	  printf("2.3.4\n");
     lenblock=len+3;
     lenresp=lenresp+len-1;
     *lenr=lenresp;
-	
+		  	  	  	  printf("2.3.5\n");
     #ifdef DEBUG
 /*    fprintf(stdout,"\n"); */
     #endif
 
     if(apdu[lenblock-1]!=fxor(apdu,lenblock-1)){
+	    	  	  	  	  printf("2.3.6\n");
       for (i=0; i<lenblock+1; i++) {
       #ifdef DEBUG
       fprintf(stdout, " %02x", apdu[i]);
@@ -419,6 +422,7 @@ while (j<10){
       errx(1,"transmission error: fxor");
     }
     if((apdu[1]==0x60) || (apdu[1]==0x20)) {
+	    	    	  	  	  	  printf("2.3.7\n");
       #ifdef DEBUG
       fprintf(stdout,"Subsequent block follows\n");
       #endif
@@ -427,11 +431,13 @@ while (j<10){
       if (apdu[1]==0x60) {
         block[1]=0x80;
       }
+	    	    	    	  	  	  	  printf("2.3.8\n");
       else {
         block[1]=0x90;
       }
       block[2]=0x00;
       lenblock=4;
+	    	    	    	    	  	  	  	  printf("2.3.9\n");
       block[lenblock-1]=fxor(block,lenblock-1);
       lenc=lenblock;
       j++;
