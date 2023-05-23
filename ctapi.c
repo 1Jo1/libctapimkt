@@ -136,13 +136,13 @@ char CT_init (  unsigned short  ctn, unsigned short  pn ) {
   case 3: strcpy(device,"/dev/ttyS2"); break;   /* COM3 mit 9600 Baud */
   case 4: strcpy(device,"/dev/ttyS0"); break;   /* COM1 mit 115200 Baud */
   case 5: strcpy(device,"/dev/ttyS1"); break;   /* COM2 mit 115200 Baud */
-  case 6: strcpy(device,"/dev/ttyACM0"); break; /* USB1 ber ACM0 */
-  case 7: strcpy(device,"/dev/ttyACM1"); break; /* USB2 ber ACM1 */
-  case 8: strcpy(device,"/dev/ttyS0"); break;   /* USB1 ber ACM0 mit Verz”gerung fr VML GK1 */
-  case 9: strcpy(device,"/dev/ttyUSB0"); break; /* USB ber USB-seriell-Adapter mit 9600 Baud */
-  case 10: strcpy(device,"/dev/ttyUSB0"); break; /* USB ber USB-seriell-Adapter mit 115200 Baud */
-  case 11: strcpy(device,"/dev/ttyACM0"); break; /* USB1 ber ACM0 fr Hypercom medMobile und SCM eHealth500 */
-  case 12: strcpy(device,"/dev/ttyACM1"); break; /* USB2 ber ACM1 fr Hypercom medMobile und SCM eHealth500 */
+  case 6: strcpy(device,"/dev/ttyACM0"); break; /* USB1 Âber ACM0 */
+  case 7: strcpy(device,"/dev/ttyACM1"); break; /* USB2 Âber ACM1 */
+  case 8: strcpy(device,"/dev/ttyS0"); break;   /* USB1 Âber ACM0 mit Verzâ€gerung fÂr VML GK1 */
+  case 9: strcpy(device,"/dev/ttyUSB0"); break; /* USB Âber USB-seriell-Adapter mit 9600 Baud */
+  case 10: strcpy(device,"/dev/ttyUSB0"); break; /* USB Âber USB-seriell-Adapter mit 115200 Baud */
+  case 11: strcpy(device,"/dev/ttyACM0"); break; /* USB1 Âber ACM0 fÂr Hypercom medMobile und SCM eHealth500 */
+  case 12: strcpy(device,"/dev/ttyACM1"); break; /* USB2 Âber ACM1 fÂr Hypercom medMobile und SCM eHealth500 */
   default:  strcpy(device,"/dev/ttyS0"); break;
   }
 
@@ -297,19 +297,25 @@ while (j<10){
 
   printf("1\n");
   memset( apdu, 0x00, sizeof(apdu));
+
+			  printf("%s\n", frage);
   for (i=0; i<3 ; i++){
     apdu[i]=frage[i];
   }
+		  printf("1.0.1\n");
   len=frage[retval-1]+1;
-
+	  printf("1.0\n");
   if ( (frage[1]==0x81) || (frage[1]==0x91) || (frage[1]==0x82) || (frage[1]==0x92) ){
     #ifdef DEBUG
     fprintf(stdout,"\ntransmission error\n");
     #endif
     
+	  printf("1.1\n");
     retval=readblock(port, 1);
+	  	  printf("1.2\n");
 
     if (retval < 0)return retval; 
+	  	  	  printf("1.3\n");
 
     printf("2\n");
     apdu[3]=frage[0];
