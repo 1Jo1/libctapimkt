@@ -431,10 +431,10 @@ while (j<10){
       if (apdu[1]==0x60) {
         block[1]=0x80;
       }
-	    	    	    	  	  	  	  printf("2.3.8\n");
       else {
         block[1]=0x90;
       }
+	    printf("2.3.8\n");
       block[2]=0x00;
       lenblock=4;
 	    	    	    	    	  	  	  	  printf("2.3.9\n");
